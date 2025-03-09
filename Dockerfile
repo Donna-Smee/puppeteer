@@ -27,7 +27,7 @@ RUN apt-get update && apt-get install -y \
   && rm -rf /var/lib/apt/lists/*
 
 # Install Puppeteer
-COPY package*.json ./
+COPY ./package.json ./package-lock.json ./
 RUN npm install
 
 # Copy the Puppeteer script into the container
@@ -37,4 +37,4 @@ COPY trigger_errors.js /app/
 ENTRYPOINT ["node", "trigger_errors.js"]
 
 # Expose the port (optional, not needed for Puppeteer itself)
-EXPOSE 3000
+EXPOSE 5000
