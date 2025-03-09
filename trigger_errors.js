@@ -1,15 +1,15 @@
 const puppeteer = require('puppeteer');
 
-/*const websites = [
-  { url: 'http://nodejs-app-1:3000/error', name: 'Website A' },
-  { url: 'http://nodejs-app-2:4000/error', name: 'Website B' },
-];*/
-
-
 const websites = [
+  { url: 'http://nodejs-app-1:3000/error', name: 'first-web-app' },
+  { url: 'http://nodejs-app-2:4000/error', name: 'second-web-app' },
+];
+
+
+/*const websites = [
     { url: 'http://localhost:3000/error', name: 'first-web-app' },
     { url: 'http://localhost:4000/error', name: 'second-web-app' },
-  ];
+  ];*/
 
 
   
