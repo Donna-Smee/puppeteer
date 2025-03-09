@@ -15,7 +15,9 @@ const websites = [
 
   
   async function triggerError(website) {
-    const browser = await puppeteer.launch({ headless: process.env.PUPPETEER_HEADLESS !== 'false' });
+    const browser = await puppeteer.launch({ 
+      headless: process.env.PUPPETEER_HEADLESS !== 'false',
+      args: ['--no-sandbox', '--disable-setuid-sandbox'] });
     const page = await browser.newPage();
   
     console.log(`Triggering error on: ${website.name}`);
